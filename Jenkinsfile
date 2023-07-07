@@ -86,16 +86,16 @@ pipeline {
 
     }
 
-    post {
-        always {
-            // Cleanup stage
+    // post {
+    //     always {
+    //         // Cleanup stage
             
-            script {
-                sh "docker stop cowsay-${NEWTAG}"
-                sh 'docker system prune -af'
-                cleanWs()
-            }
-        }
-    }
+    //         script {
+    //             sh "docker stop cowsay-${NEWTAG}"
+    //             sh 'docker system prune -af'
+    //             cleanWs()
+    //         }
+    //     }
+    // }
 
 }
