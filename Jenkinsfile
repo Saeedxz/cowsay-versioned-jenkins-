@@ -18,7 +18,7 @@ pipeline {
         }
 
         stage('createVersion') {
-            when { expression { (env.GIT_BRANCH == 'main' && params.VERSION != 'EOS') || env.GIT_BRANCH ==~ /release\/.*/} }
+            when { expression { (env.GIT_BRANCH == 'master' && params.VERSION != 'EOS') || env.GIT_BRANCH ==~ /release\/.*/} }
             steps {
                 script {
                     if (params.VERSION == "EOS") {
