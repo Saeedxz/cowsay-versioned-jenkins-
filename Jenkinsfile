@@ -49,6 +49,7 @@ pipeline {
                     }
                     NEWTAG = newtag
                     sh "git push --tags"
+                    sh "git push origin --all"
                 }
             }
         }
