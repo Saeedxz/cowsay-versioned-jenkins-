@@ -13,7 +13,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                checkout scmGit(branches: [[name: '**']], extensions: [[$class: 'WipeWorkspace']], userRemoteConfigs: [[credentialsId: 'gilabb', url: 'http://gitlab/Saeed/cowsay-versioned.git']])
+                checkout scmGit(branches: [[name: '**']], extensions: [], userRemoteConfigs: [[credentialsId: 'gilabb', url: 'http://gitlab/Saeed/versioned_cowsay.git']])
             }
         }
 
